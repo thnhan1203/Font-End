@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải thích code HTML index 2</title>
+</head>
+<body>
+    <h1>From Đăng Ký Sự Kiện</h1>
+
+    <from>
+        <!--from dùng để nhập thông tin người dùng -->
+
+        <label for="Name">Nhập Họ Tên:</label>
+        <input type="text" id="Name" placeholder="Họ Tên">
+        <br><br>
+        <!--
+        -label dùng để tạo nhãn cho ô nhập liệu, noi dung của nhãn là "Nhập Họ Tên".
+        -for="Name" liên kết nhãn với ô nhập liệu có id là Name, 
+        khi click vào nhãn sẽ tự động focus vào ô nhập liệu.
+        -input type="text" tạo ô nhập liệu dạng text, Nguoi dùng có thể nhập ten,dia chỉ...
+        -id="Name" đặt id cho ô nhập liệu là Name, dùng để liên kết với nhãn.
+        -placeholder="Họ Tên" hiển thị nội dung "Họ Tên" trong ô nhập liệu khi chưa nhập dữ liệu.
+        --> 
+        <label for="Email">Nhập Email:</label>
+        <input type="text" id="Email" placeholder="Email">
+        <br><br>
+        <label for="Time">Nhập Thời Gian</label>
+        <input type="datetime-local" id="Time">
+        <!--datetime-local tạo ô nhập liệu dạng ngày tháng năm giờ phút-->
+        <br><br>
+        <label>Giới Tính:</label>
+        <input type="radio" name="Giới Tính"> Nam
+        <input type="radio" name="Giới Tính"> Nữ
+        <!----
+        -radio tạo nút tròn,chỉ được chọn 1.
+        -Name="Giới Tính" đặt tên cho nhóm nút radio là Giới Tính.
+        -->
+        <br><br>
+        <input type="submit" value="Xác Nhận">
+        <!--
+        input type="submit" tạo nút gửi form
+        value="Xác Nhận" hiển thị nội dung "Xác Nhận" trên nút gửi form
+        -->
+    </from>
+</body>
+</html>
