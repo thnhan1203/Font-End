@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+</head>
+<style>
+ .item{
+    width: 100px;
+    height: 100px;
+ }
+
+ .red{
+    background-color: red;
+    flex-grow: 2;
+ }
+
+ .green{
+    background-color: green;
+    flex-grow: 2;
+ }
+
+ .blue{
+    background-color: blue;
+    height: 200px;
+ }
+ .pink{
+    background-color: pink;
+}
+.black{
+    background-color: black;
+}
+.yellow{
+    background-color: yellow;
+}
+ .container{
+    display: flex; /*display: là dành hiệu ứng làm cho chiều ngang */
+    flex-direction: row; /* có 2 dạng: column - row. mặc định của flex.... là row */
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 20px;
+    align-items: center;
+
+}
+
+
+</style>
+<body>
+     <div class="container">
+        <div class="item red">1</div>
+        <div class="item green">2</div>
+        <div class="item blue">3</div>
+        <div class="item pink">4</div>
+        <div class="item black">5</div>
+        <div class="item yellow">6</div>
+     </div>
+</body>
+</html>

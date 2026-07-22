@@ -1,0 +1,72 @@
+/* Thuộc tính reset trình duyệt về mặc định */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+display: flex;
+justify-content: space-between;
+border: 1px solid #ccc;
+align-items: center;
+padding: 18px 80px;
+
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #150d0d;
+    font-size: 18px;
+    font-weight: 600;
+    transition: ease 0.25s;
+    /* border: 1px solid #ccc; */
+    padding: 8px 10px;
+}
+.nav-links ul li {
+    list-style: none;
+}
+.nav-links ul {
+    display: flex;
+    
+}
+.nav-links ul li a:hover{
+    color: red;
+    border-bottom: 2px solid violet;
+}
+
+section{
+width: 1100px;
+margin: 0 auto;
+padding: 50px 0;
+}
+.project{
+    display: flex;
+    gap: 20px;
+}
+.item-project{
+    width: 33,33%;
+    overflow: hidden;
+    border-radius: 10px;
+
+}
+.img-project{
+    width: 100%;
+    border-radius: 5%;
+    transition: ease 0.25s;
+    object-fit: contain;
+}
+.description{
+    font-weight: 600;
+    font-size: 20px;
+    padding: 5px;
+    cursor: pointer;
+    transition: ease 0.25s;
+}
+.description:hover{
+    color: rgb(255, 0, 119);
+}
+
+.img-project:hover{
+    transition: scale(1.1);
+}
