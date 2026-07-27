@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web Hoàn Chỉnh - Flexbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <a href="#">DevStudy</a>
+        </div>
+        <ul class="menu">
+            <li><a href="#home">Trang chủ</a></li>
+            <li><a href="#services">Dịch vụ</a></li>
+            <li><a href="#contact">Liên hệ</a></li>
+        </ul>
+    </header>
+
+    <main class="content" id="services">
+        <h2 class="section-title">Khóa Học Nổi Bật</h2>
+
+        <div class="card-container">
+            <div class="card">
+                <h3>HTML & CSS Cơ Bản</h3>
+                <p>Nắm vững tư duy tạo dựng giao diện Web, cách dàn trang căn bản và áp dụng Flexbox linh hoạt.</p>
+                <span class="card-tag">Thời lượng: 4 tuần</span>
+            </div>
+
+            <div class="card">
+                <h3>Lập Trình C++ / Java</h3>
+                <p>Rèn luyện tư duy lập trình, thuật toán và cấu trúc dữ liệu nền tảng cho sinh viên CNTT.</p>
+                <span class="card-tag">Thời lượng: 6 tuần</span>
+            </div>
+
+            <div class="card">
+                <h3>Quản Trị Hệ Thống</h3>
+                <p>Tìm hiểu các khái niệm mạng, dịch vụ Linux Ubuntu, DHCP, DNS và quản lý người dùng.</p>
+                <span class="card-tag">Thời lượng: 5 tuần</span>
+            </div>
+        </div>
+    </main>
+
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Thông Tin Liên Hệ</h3>
+                <p><b>Địa chỉ:</b> TP. Hồ Chí Minh</p>
+                <p><b>Điện thoại:</b> 123456789</p>
+                <p><b>Email:</b> vlsc.edu.vn</p>
+            </div>
+
+            <form class="contact-form">
+                <input type="text" placeholder="Họ và tên" required>
+                <input type="email" placeholder="Email" required>
+                <textarea rows="4" placeholder="Nội dung" required></textarea>
+                <button type="submit">Gửi tin nhắn</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div>
+                <h4 style="color: white; margin-bottom: 5px;">DevStudy Portal</h4>
+                <p>Nền tảng hỗ trợ sinh viên học tập hiệu quả.</p>
+            </div>
+            <div>
+                <p>Hotline: 123456789</p>
+                <p>Email: vlsc.edu.vn</p>
+            </div>
+        </div>
+        <div class="website">
+            <p>Bài tập Thiết kế Website cho sinh viên CNTT</p>
+        </div>
+    </footer>
+
+</body>
+</html>
