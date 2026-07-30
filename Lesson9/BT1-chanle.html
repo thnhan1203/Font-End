@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiem tra chan le</title>
+</head>
+<body>
+    <h2>Kiem tra chan le</h2>
+    <label for="number">Nhap so nguyen > 0 </label>
+    <input type="number" id="nhapso">
+    <br>
+    <button onclick="Test()">Kiem tra</button>
+    <p id="result"></p>
+    <script>
+        function Test() {
+          let nhapso = document.getElementById("nhapso").value;
+          if(nhapso < 0) {
+            document.getElementById("result").innerHTML = "Vui long nhap so nguyen duong!!!";
+          }
+          else if(nhapso % 2 == 0){
+            document.getElementById("result").innerHTML = nhapso + " la so chan";
+          }
+          else{
+            document.getElementById("result").innerHTML = nhapso + " la so le";
+          }
+        }
+    </script>
+</body>
+</html>

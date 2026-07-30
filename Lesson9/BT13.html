@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 13 - Chuyển đổi nhiệt độ</title>
+
+</head>
+<body>
+
+    <h2>Bài 13. Chuyển đổi nhiệt độ</h2>
+    
+    <div class="form-group">
+        <label for="celsius">Nhập nhiệt độ (°C):</label>
+        <input type="number" id="celsius" placeholder="Nhập °C">
+    </div>
+
+    <button onclick="chuyenDoiNhietDo()">Chuyển đổi</button>
+
+    <div id="ketQua" class="result"></div>
+
+    <script>
+        function chuyenDoiNhietDo() {
+            let c = parseFloat(document.getElementById("celsius").value);
+            
+            // Kiểm tra dữ liệu hợp lệ
+            if (isNaN(c)) {
+                document.getElementById("ketQua").innerText = "Vui lòng nhập số nhiệt độ hợp lệ!";
+                return;
+            }
+
+            // Công thức: F = (9/5) * C + 32
+            let f = (9 / 5) * c + 32;
+
+            document.getElementById("ketQua").innerText = "Kết quả: " + f.toFixed(2) + " °F";
+        }
+    </script>
+
+</body>
+</html>

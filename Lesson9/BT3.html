@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 3: Xếp loại học lực</title>
+</head>
+<body>
+    <h2>Bài tập 3: Xếp loại học lực</h2>
+    <label for="score">Nhập điểm trung bình: </label>
+    <input type="number" id="score">
+    <br>
+    <button onclick="gradeStudent()">Xếp loại</button>
+    <p id="result"></p>
+
+    <script>
+        function gradeStudent() {
+            let score = parseFloat(document.getElementById("score").value);
+            let result = document.getElementById("result");
+
+            if (score < 0 || score > 100) {
+                result.innerHTML = "Vui lòng nhập điểm hợp lệ (0-100)!";
+            } else if (score >= 90) {
+                result.innerHTML = "Xếp loại: A";
+            } else if (score >= 80) {
+                result.innerHTML = "Xếp loại: B";
+            } else if (score >= 70) {
+                result.innerHTML = "Xếp loại: C";
+            } else if (score >= 60) {
+                result.innerHTML = "Xếp loại: D";
+            } else {
+                result.innerHTML = "Xếp loại: F";
+            }
+        }
+    </script>
+</body>
+</html>

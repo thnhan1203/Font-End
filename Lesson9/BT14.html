@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 14: Tính chỉ số BMI</title>
+</head>
+<body>
+
+    <h2>Chương trình tính chỉ số BMI</h2>
+
+    <label for="chieuCao">Chiều cao (m):</label><br>
+    <input type="number" id="chieuCao" step="0.01" placeholder="Ví dụ: 1.70"><br><br>
+
+    <label for="canNang">Cân nặng (kg):</label><br>
+    <input type="number" id="canNang" step="0.1" placeholder="Ví dụ: 65"><br><br>
+
+    <button onclick="xuLyTinhBMI()">Tính BMI</button>
+
+    <h3 id="ketQua"></h3>
+
+    <script>
+        function tinhBMI(chieuCao, canNang) {
+            if (isNaN(chieuCao) || isNaN(canNang) || chieuCao <= 0 || canNang <= 0) {
+                return "Vui lòng nhập chiều cao và cân nặng hợp lệ (> 0)!";
+            }
+
+            const bmiRaw = canNang / (chieuCao * chieuCao);
+            const bmi = Number(bmiRaw.toFixed(2));
+
+            let ketLuan = "";
+            if (bmi < 18.5) {
+                ketLuan = "Gầy";
+            } else if (bmi < 25) {
+                ketLuan = "Bình thường";
+            } else if (bmi < 30) {
+                ketLuan = "Thừa cân";
+            } else {
+                ketLuan = "Béo phì";
+            }
+
+            return `Chỉ số BMI: ${bmi} - Kết luận: ${ketLuan}`;
+        }
+
+        function xuLyTinhBMI() {
+            const chieuCaoInput = document.getElementById("chieuCao").value;
+            const canNangInput = document.getElementById("canNang").value;
+
+            const chieuCao = parseFloat(chieuCaoInput);
+            const canNang = parseFloat(canNangInput);
+
+            const thongBao = tinhBMI(chieuCao, canNang);
+            document.getElementById("ketQua").innerText = thongBao;
+        }
+    </script>
+
+</body>
+</html>
